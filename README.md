@@ -14,13 +14,13 @@ npm install @universal-packages/module-loader
 
 ## loadModules()
 
-Load recusively a directory until it finds a package, index file or just a file in that order, If it finds a package.json it will just import the main file in the package, If it find and index file it will just import that index file, If any of above it will just import files deep in the hierarchy.
+Load recursively a directory until it finds a package, index file or just a file in that order, If it finds a package.json it will just import the main file in the package, If it find and index file it will just import that index file, If any of above it will just import files deep in the hierarchy.
 
 ```js
 import { loadModules } from '@universal-packages/module-loader'
 
 async function test() {
-  const modules = await loadconfig('./modules')
+  const modules = await loadModules('./modules')
 
   console.log(modules)
 }
@@ -37,7 +37,7 @@ test()
 ## Options
 
 - **`onlyDefault`** `boolean`
-  When loading the module directly only set `exports` as the `exports.default`, usefull if you are importing classes or components that predominate in the module.
+  When loading the module directly only set `exports` as the `exports.default`, useful if you are importing classes or components that predominate in the module.
 
 - **`conventionPrefix`** `string`
   Only load modules that follow the convention `<module>.<conventionPrefix>.js`, exp: `User.model.js`.
@@ -46,7 +46,7 @@ test()
   import { loadModules } from '@universal-packages/module-loader'
 
   async function test() {
-    const modules = await loadconfig('./modules', { conventionPrefix:  })
+    const modules = await loadModules('./modules', { conventionPrefix:  })
 
     console.log(modules)
   }
@@ -66,7 +66,7 @@ This library is developed in TypeScript and shipped fully typed.
 
 ## Contributing
 
-The development of this library in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving this library.
+The development of this library happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving this library.
 
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Contributing Guide](./CONTRIBUTING.md)

@@ -1,11 +1,10 @@
 import path from 'path'
 import { traverse, DirectoryMap } from '@universal-packages/directory-traversal'
 import { LoadModulesOptions, ModuleRegistry, ModuleType } from './loadModules.types'
-import { Console } from 'console'
 
 /**
  *
- * Starts importing recusively until it finds a package, index file or just a file in that order
+ * Starts importing recursively until it finds a package, index file or just a file in that order
  *
  * If it finds a package.json it will just import the main file in the package
  *
@@ -72,7 +71,7 @@ async function processDirectory(directory: DirectoryMap, options: LoadModulesOpt
   return modules
 }
 
-/** Creates a registry in the current redult packed with an error if any */
+/** Creates a registry in the current result packed with an error if any */
 async function importAndRegister(location: string, type: ModuleType, options: LoadModulesOptions): Promise<ModuleRegistry> {
   try {
     const imported = await import(location)
