@@ -4,7 +4,7 @@
 [![Testing](https://github.com/universal-packages/universal-module-loader/actions/workflows/testing.yml/badge.svg)](https://github.com/universal-packages/universal-module-loader/actions/workflows/testing.yml)
 [![codecov](https://codecov.io/gh/universal-packages/universal-module-loader/branch/main/graph/badge.svg?token=CXPJSN8IGL)](https://codecov.io/gh/universal-packages/universal-module-loader)
 
-Imports deeply all modules in a directory as a list to use later, this is useful when you are expecting a arbitrary amount of modules that behaves the same and can be used without the need of importing them manually or even importing them manually will be a hasel, it can also be useful to activate modules (probably with decorators) that need to be activated before being imported manually later.
+Imports deeply all modules in a directory as a list to use later, this is useful when you are expecting a arbitrary amount of modules that behaves the same and can be used without the need of importing them manually or even importing them manually will be a hazel, it can also be useful to activate modules (probably with decorators) that need to be activated before being imported manually later.
 
 ## Install
 
@@ -12,7 +12,9 @@ Imports deeply all modules in a directory as a list to use later, this is useful
 npm install @universal-packages/module-loader
 ```
 
-## loadModules()
+## Global methods
+
+#### **`loadModules(location: string, [options])`**
 
 Load recursively a directory until it finds a package, index file or just a file in that order, If it finds a package.json it will just import the main file in the package, If it find and index file it will just import that index file, If any of above it will just import files deep in the hierarchy.
 
@@ -34,7 +36,7 @@ test()
 // > ]
 ```
 
-## Options
+### Options
 
 - **`onlyDefault`** `boolean`
   When loading the module directly only set `exports` as the `exports.default`, useful if you are importing classes or components that predominate in the module.
