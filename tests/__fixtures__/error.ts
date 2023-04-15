@@ -1,5 +1,3 @@
-export default class ErrorDude {
+export default class ErrorDude {}
 
-}
-
-(ErrorDude as any).error()
+;(ErrorDude as any).error()
