@@ -1,5 +1,6 @@
+import { DirectoryMap, traverse } from '@universal-packages/directory-traversal'
 import path from 'path'
-import { traverse, DirectoryMap } from '@universal-packages/directory-traversal'
+
 import { LoadModulesOptions, ModuleRegistry, ModuleType } from './loadModules.types'
 
 /**
