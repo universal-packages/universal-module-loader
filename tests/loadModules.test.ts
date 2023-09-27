@@ -2,7 +2,7 @@ import { loadModules } from '../src'
 import Post from './__fixtures__/models/Post.model'
 import User from './__fixtures__/models/User.model'
 
-describe('loadModules', (): void => {
+describe(loadModules, (): void => {
   it('load modules deeply in a directory', async (): Promise<void> => {
     const modules = await loadModules('./tests/__fixtures__')
 
